@@ -1,14 +1,14 @@
 import "./product.css";
 import Quantity from "./quantity";
 
-const Product = () => {
+const Product = (props) => {
     return (
         <div className="product">
           <div className="img">
-            <img src="https://picsum.photos/200/300" alt="" />
+            <img src={"/img/" + props.data.image} alt="" />
           </div>
           <div className="title">
-            <h5>AI Solutions</h5>
+            <h5>{props.data.title}</h5>
           </div>
           <div className="total">
             <label>Total</label>
