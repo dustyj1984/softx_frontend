@@ -1,8 +1,27 @@
 .catalog{
+  padding-top: 25px;
+  padding-bottom: 25px;
+    background-color: rgb(194, 231, 248);
+    border: 1px dotted black;
+ 
+}
+.catalog h1{
+    font-size: 1.5em;
     color: blue;
-    font-size: 14px;
+   
+    margin-left: 5px; font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 1px 0 #000;
+
+}
+
+.catalog .subtitle{
+    background-color: none;
+    color: blue;
+    font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    
+    margin-bottom: 10px;
+    text-align: center;
 }

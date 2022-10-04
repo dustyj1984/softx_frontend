@@ -16,7 +16,7 @@ function Catalog(){
     return(
         <div className="catalog">
             <h1>Check our amazing catalog</h1>
-            <h5>We have {products.length} products waiting for you</h5>
+            <h5 className='subtitle'>We have {products.length} products waiting for you!</h5>
         <div className="list-container">
         {products.map( prod => <Product key={prod._id} data= {prod} /> )}
 

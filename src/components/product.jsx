@@ -4,7 +4,7 @@ import Quantity from "./quantity";
 const Product = (props) => {
     return (
         <div className="product">
-          <div className="img">
+          <div className="img-fluid">
             <img src={"/img/" + props.data.image} alt="" />
           </div>
           <div className="title">
