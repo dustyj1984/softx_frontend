@@ -1,0 +1,8 @@
+
+# run project 
+npm start 
+
+# to change location 
+cd <drag folder here
+# git configuration
+
