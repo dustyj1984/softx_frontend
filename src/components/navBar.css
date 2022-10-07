@@ -1,18 +1,5 @@
- .container{
-    width: 100%;
-
-
-
-
-}
-
 .img{
-    height: 150px;
-    width: 150px;
-    border: 1px solid black;
-   
-
-    
+    size: 50%;
+    margin-bottom: -50px;
 }
-
 

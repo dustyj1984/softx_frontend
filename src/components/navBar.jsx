@@ -2,7 +2,7 @@ import "./navBar.css"
 
 function NavBar(){
     return (
-<nav className="navbar">
+<nav className="navbar bg-light">
   <div className="container">
     <a className="navbar-brand" href="#">
       <img className="img" src="./img/softx-logo.png"></img>

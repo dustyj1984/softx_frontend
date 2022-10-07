@@ -1,7 +1,22 @@
+import { useState } from "react";
 import "./product.css";
-import Quantity from "./quantity";
+import QuantityPicker from "./quantityPicker";
+
 
 const Product = (props) => {
+  const [quantity,setQuantity] = useState(1);
+  const handleQuantityChange = (qty) => {
+  setQuantity(qty);
+    
+  }
+
+  const getTotal = () => {
+    const total = quantity * props.data.price;
+    return total.toFixed("2");
+
+
+  
+  }
     return (
         <div className="product">
           <div className="img-fluid">
@@ -14,15 +29,15 @@ const Product = (props) => {
             <label>Total</label>
           </div>
           <div className="price">
-            <label>Price</label>
+            <label className="price" >${props.data.price.toFixed("2")}</label>
           </div>
 
-          <Quantity />
+          <QuantityPicker onChange={handleQuantityChange}/>
           <div className="add"> 
             <button className="btn">Add</button>
           </div>  
         
         </div>
     );
-    };
+    }
     export default Product;

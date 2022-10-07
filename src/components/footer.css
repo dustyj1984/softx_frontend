@@ -1,8 +1,7 @@
 .footer {
     color: black;
-    font-size: 12px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 20px;
-    padding: 100px;
-    text-align: left;
+    text-align: center;
 }

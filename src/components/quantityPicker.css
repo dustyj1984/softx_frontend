@@ -1,0 +1,23 @@
+.quantity button{
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid blue;
+    background-color: #eee;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.quantity label{
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 5px 5px;
+    border-radius: 10px;
+
+}
