@@ -1,7 +1,7 @@
-.footer {
+.footer{
     color: black;
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
 }

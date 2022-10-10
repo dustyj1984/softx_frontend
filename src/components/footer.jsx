@@ -2,10 +2,11 @@ import "./footer.css";
 
 function Footer() {
     return(
-        <div className="footer">
-            <div>2022</div>
-            <div className="name">Dustin Jensen</div>
+     
+        <div className="container-fluid">
+            <h6 className="footer">Softx All Rights Reversed 2022</h6>
         </div>
+        
     );
  }
 

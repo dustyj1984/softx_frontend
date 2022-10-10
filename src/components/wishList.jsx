@@ -1,4 +1,7 @@
 import {useState} from 'react';
+import "./wishList.css";
+
+
 
 const WishList = ()=>{
     const[text, setText] = useState("");
@@ -14,7 +17,7 @@ const WishList = ()=>{
         setText("");
     }
     return(
-        <div>
+        <div className='wishList'>
             <h4>My Wish List</h4>        
         <div>
             <input type="text" onChange = {handleTextChange} value={text}/>
