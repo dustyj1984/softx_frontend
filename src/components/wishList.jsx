@@ -24,10 +24,10 @@ const WishList = ()=>{
             <button onClick={addToList}>Add</button>
         </div>
         <ul>
-            {list.map(t => <li>{t}</li>)}            
+            {list.map(text => <li key= {text}>{text}</li>)}            
         </ul>
     </div>
     )
-    }
+    };
 
     export default WishList;
