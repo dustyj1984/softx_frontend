@@ -1,10 +1,14 @@
-import { useState } from "react";
+
 import "./product.css";
 import QuantityPicker from "./quantityPicker";
+import { useState, useContext } from "react";
+import StoreContext from "../state/storeContext";
 
 
 const Product = (props) => {
+
   const [quantity,setQuantity] = useState(1);
+  const addToCart = useContext(StoreContext).addToCart;
   const handleQuantityChange = (qty) => {
   setQuantity(qty);
     
@@ -16,7 +20,14 @@ const Product = (props) => {
 
 
   
-  }
+  };
+
+  const handleAdd = () => {
+    let pForCart = {...props.data, quantity: quantity};
+    addToCart(pForCart);
+
+  };
+
     return (
         <div className="product">
           <div className="img-fluid">
@@ -34,7 +45,7 @@ const Product = (props) => {
 
           <QuantityPicker onChange={handleQuantityChange}/>
           <div className="add"> 
-            <button className="btn">Add</button>
+            <button onClick={handleAdd} className="btn">Add</button>
           </div>  
         
         </div>

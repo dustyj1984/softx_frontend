@@ -1,7 +1,9 @@
 const About = () => {
     return (
         <div>
-        <h1>About</h1>
+            <div>
+                <h1>One More Step to Augment your Life</h1>
+            </div>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             voluptates, quae, quod, quibusdam voluptatibus nesciunt accusantium
