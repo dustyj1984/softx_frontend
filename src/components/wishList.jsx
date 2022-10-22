@@ -20,7 +20,7 @@ const WishList = ()=>{
         <div className='wishList'>
             <h4>My Wish List</h4>        
         <div>
-            <input type="text" onChange = {handleTextChange} value={text}/>
+            <input className= "form-control" type="text" onChange = {handleTextChange} value={text}/>
             <button onClick={addToList}>Add</button>
         </div>
         <ul>

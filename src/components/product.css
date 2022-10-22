@@ -5,6 +5,10 @@
     height: 440px;
     border: 2px solid blue;
     background-color: white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
 
 }
 
@@ -17,8 +21,9 @@
     text-transform: uppercase;
     color: black;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+   
+    font-family: 'Open Sans', sans-serif;
     
 
    
@@ -32,6 +37,7 @@
     color: black;
     text-align: center;
     letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .product .total{
@@ -41,10 +47,19 @@
     text-transform: uppercase;
     color: black;;
     text-align: center;
+
 }
 
 .product .quantity{
     margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
  .add .btn{
@@ -59,6 +74,12 @@
     text-shadow: 2px 2px 3px rgb(154, 215, 250);
     text-align: center;
     letter-spacing: 1px;
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Open Sans', sans-serif;
 
 
  

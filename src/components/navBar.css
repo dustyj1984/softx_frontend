@@ -1,5 +1,25 @@
-.img{
-    size: 50%;
+.navbar img{
+    size: 10%;
     
 }
 
+.nav-item{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(194, 231, 248);
+    border: 1px solid blue;
+    color: black;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    
+}
