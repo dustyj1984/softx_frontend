@@ -40,7 +40,7 @@ const Product = (props) => {
             <label>Total: ${getTotal()}</label>
           </div>
           <div className="price">
-            <label className="price" >${props.data.price.toFixed("2")}</label>
+            <label className="price" >${props.data.price.toFixed(2)}</label>
           </div>
 
           <QuantityPicker onChange={handleQuantityChange}/>

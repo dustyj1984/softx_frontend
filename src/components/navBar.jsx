@@ -6,11 +6,23 @@ import { Link } from "react-router-dom";
 function NavBar() {
   const user = useContext(StoreContext).user;
   const cart = useContext(StoreContext).cart;
+
+  const getCount = () => {
+    let count = 0;
+    for (let i = 0; i < cart.length; i++) {
+      count += cart[i].quantity;
+    }
+
+
+    return count;
+  
+};
+
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="#">
-          <img src="/img/softx-logo.png"></img>{" "}
+        <Link className="navbar-brand" to="/">
+          <img src="/img/softx-logo.png"></img>
         </Link>
         <button
           className="navbar-toggler"
@@ -54,11 +66,11 @@ function NavBar() {
 
           <form className="d-flex" role="search">
             <Link className="btn btn-outline-light" to="/cart">
-              <span className="badge text-bg-danger">{cart.length}</span>
+              <span className="badge text-bg-danger">{getCount()}</span>
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </Link>
 
-            <label>{user.name}</label>
+            <label className="user">{user.name}</label>
           </form>
         </div>
       </div>

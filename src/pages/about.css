@@ -1,0 +1,14 @@
+.about-us{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #000;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(42, 21, 236, 0.5);
+    border: 1px solid #eee;
+
+    
+}

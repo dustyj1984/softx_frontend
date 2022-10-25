@@ -1,0 +1,25 @@
+.prod-cart {
+    display: flex;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ebebeb;
+    align-items: center;
+}
+
+
+.prod-cart img {
+    flex:1;
+    height: 75px;
+}
+
+.prod-cart .info {
+    flex: 4;
+}
+
+.prod-cart label {
+    flex: 1;    
+}
+
+.prod-cart button{
+    flex: 1;
+}

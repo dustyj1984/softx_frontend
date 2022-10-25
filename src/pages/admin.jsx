@@ -71,7 +71,7 @@ const Admin = () => {
                             <input class= "form-control" type="text" name="category" onChange={handleProductChange} />
                         </div>
                         <div className="my-control">
-                            <button onClick={saveProduct} className="btn btn-dark">Save</button>
+                            <button onClick={saveProduct} className="btn btn-primary">Save</button>
                         </div>
                     </div>
 
@@ -93,7 +93,7 @@ const Admin = () => {
                             <input className="form-control" name="discount" onChange={handleCouponChange} type="number"/>
                         </div>
                         <div className="my-control">
-                            <button onClick={saveCoupon} className="btn btn-dark">Apply</button>
+                            <button onClick={saveCoupon} className="btn btn-primary">Apply</button>
                         </div>
                     </div>
 

@@ -21,10 +21,10 @@ const WishList = ()=>{
             <h4>My Wish List</h4>        
         <div>
             <input className= "form-control" type="text" onChange = {handleTextChange} value={text}/>
-            <button onClick={addToList}>Add</button>
+            <button className= "btn btn-primary" onClick={addToList}>Add</button>
         </div>
-        <ul>
-            {list.map(text => <li key= {text}>{text}</li>)}            
+        <ul className='list-group'>
+            {list.map(text => <li className='list-group-item' key= {text}>{text}</li>)}            
         </ul>
     </div>
     )
