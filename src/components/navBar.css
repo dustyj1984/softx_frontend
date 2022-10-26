@@ -28,13 +28,44 @@
     color: black;
     text-decoration: none;
 }
-.user{
-margin-left: 20px;
-margin-right: 20px;
-font-size: 10px;
-font-weight: bold;
-text-decoration: none;
-border-radius: 10px;
-background-color: rgb(194, 231, 248);
+.d-flex{
+    align-items: center;    
+}
+
+.d-flex .btn{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid blue;
+    color: black;
+    text-align: center;
+    width: 100px;
+    color: white;
+
+}
+
+.d-flex .btn:hover{
+    background-color: white;
+    color: blue;
+}
+
+.d-flex i{
+        margin-left: 1px;
+        color: blue;
     
 }
+
+.user{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 10px;
+    font-weight: bold;
+
+    
+}
+
+
+
+

@@ -22,7 +22,7 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img src="/img/softx-logo.png"></img>
+          <img src="/images/softx-logo.png"></img>
         </Link>
         <button
           className="navbar-toggler"
@@ -70,7 +70,8 @@ function NavBar() {
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </Link>
 
-            <label className="user">{user.name}</label>
+            <label className="user">{user.name} <i className="fa fa-chevron-down" aria-hidden="true"></i>
+            </label>
           </form>
         </div>
       </div>

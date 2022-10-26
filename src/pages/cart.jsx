@@ -1,7 +1,7 @@
 import "./cart.css";
 import { useContext } from "react";
 import StoreContext from "../state/storeContext";
-import ProductInCart from "../components/productinCart";
+import ProductInCart from "../components/productInCart";
 
 const Cart = () => {
     const cart = useContext(StoreContext).cart;
@@ -16,7 +16,7 @@ const Cart = () => {
     const getTotal = () => {
         let total = 0;
         for (let i = 0; i < cart.length; i++) {
-            total += cart[i].price * cart[i].quantity;
+            total += (cart[i].price * cart[i].quantity);
 
         }
         return "$" + total.toFixed("2");
@@ -29,8 +29,8 @@ const Cart = () => {
 
         <div className="parent">
             <div className="products">
-                <ul>
-                    {cart.map((prod => <ProductInCart key={prod._id} data={prod} />))}
+                <ul className="prodInCart">
+                    {cart.map(prod => <ProductInCart key={prod._id} data={prod} />)}
                 
                 </ul>
             </div>
@@ -38,6 +38,9 @@ const Cart = () => {
             <div className="total">
                 <h3>Total</h3>
                 <h5 className="header">Your total is ${getTotal()}</h5>
+
+                <hr />
+                
                 <button className="btn btn-primary">BUY NOW</button>
             </div>
         </div>

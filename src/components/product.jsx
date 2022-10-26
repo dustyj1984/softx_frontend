@@ -31,7 +31,7 @@ const Product = (props) => {
     return (
         <div className="product">
           <div className="img-fluid">
-            <img src={"/img/" + props.data.image} alt="" />
+            <img src={"/images/" + props.data.image} alt="" />
           </div>
           <div className="title">
             <h5>{props.data.title}</h5>

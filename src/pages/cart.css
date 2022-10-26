@@ -48,3 +48,18 @@
     text-shadow: 1px 1px 1px #fff;
     
 }
+
+.cart .products{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+     font-size: 14px;
+    color: blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff; 
+
+}
+

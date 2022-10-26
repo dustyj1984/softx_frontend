@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/navBar';
 import Footer from './components/footer';
@@ -21,7 +20,7 @@ function App() {
   return (
     <GlobalContext>
     <BrowserRouter>
-    <div>
+    <div className='main'>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

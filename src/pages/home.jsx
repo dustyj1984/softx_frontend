@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home">
         <div className="hero">
         <div>
-        <img src="/img/hero.jpg" alt="" />
+        <img src="/images/hero.jpg" alt="" />
         </div>
         <div className="content">
             <h1 className="title">Welcom to Softx!</h1>
