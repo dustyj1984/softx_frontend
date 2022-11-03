@@ -1,15 +1,35 @@
 import "./admin.css";
-import { useState } from "react";
-import Product from './../components/product';
+import { useState, useEffect } from "react";
+import DataService from './../services/dataService';
 
 
 const Admin = () => {
     
     const [coupon, setCoupon] = useState({});
     const [allCoupons, setAllCoupons] = useState([]);
+    
 
     const [product, setProduct] = useState({}); 
     const [allProducts, setAllProducts] = useState([]);
+
+    useEffect(() => {
+        loadCoupons();
+        loadProducts();
+    }, [])
+
+    const loadCoupons = async () => {
+        let service = new DataService();
+        let list = await service.getCoupons();
+        setAllCoupons(list);
+    };
+
+    const loadProducts = async () => {
+        let service = new DataService();
+        let prods = await service.getCatalog();
+        setAllProducts(prods);
+    };
+
+
 
     const handleCouponChange = (e) => {
         const text = e.target.value;
@@ -20,9 +40,14 @@ const Admin = () => {
         setCoupon(copy);
     };
 
-    const saveCoupon = () => {
+    const saveCoupon = async() => {
         let copy = {...coupon};
                 copy.discount = parseFloat(copy.discount);
+        
+        let service = new DataService();
+        let c = await service.saveCoupon(copy);
+        console.log(c);
+
             
         let couponList = [...allCoupons];
         couponList.push(copy);
@@ -39,9 +64,14 @@ const Admin = () => {
         setProduct(copy);
     };
     
-    const saveProduct = () => {
+    const saveProduct = async ()  => {
         let copy = {...product};
         copy.price = parseFloat(copy.price);
+
+        let service = new DataService();
+        let prod = await service.saveProduct(copy);
+        console.log(prod);
+
 
         let prodList = [...allProducts];        
         prodList.push(copy);
@@ -68,7 +98,7 @@ const Admin = () => {
                         </div>
                         <div>
                             <label className="form-label">Category</label>
-                            <input class= "form-control" type="text" name="category" onChange={handleProductChange} />
+                            <input className= "form-control" type="text" name="category" onChange={handleProductChange} />
                         </div>
                         <div className="my-control">
                             <button onClick={saveProduct} className="btn btn-primary">Save</button>
@@ -76,7 +106,7 @@ const Admin = () => {
                     </div>
 
                     <ul>
-                        {allProducts.map(p => <li key={p.title}>{p.title} - {p.category} - ${p.price} </li>)}
+                        {allProducts.map((p, index) => <li key={index}>{p.title} - {p.category} - ${p.price} </li>)}
                     </ul>
                 </section>
 
@@ -98,7 +128,7 @@ const Admin = () => {
                     </div>
 
                     <ul> 
-                        {allCoupons.map(c => <li key={c.code}>{c.code} - {c.discount}</li>)}
+                        {allCoupons.map((c, index)=> <li key={index}>{c.code} - {c.discount}</li>)}
                     </ul>                  
                 
                 </section>
@@ -112,19 +142,4 @@ const Admin = () => {
 export default Admin;
 
 
-/**
- * Product:
- * - title
- * - price
- * - image
- * category
- * 
- * 1- Create a form
- * create the state for the object
- * create another state for the list of products
- * handle the change of the function
- * save the function
- * display the list of products
- * (title - category- price)
- */
 

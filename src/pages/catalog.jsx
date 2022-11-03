@@ -9,10 +9,19 @@ import { useState } from 'react';
 function Catalog(){
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        let service = new Dataservice();
-        let result = service.getCatalog();
-        setProducts(result);
+    loadData();
+        
     }, [])
+
+    
+
+    const loadData= async()=>{
+
+        let service = new Dataservice();
+        let result = await service.getCatalog();
+        setProducts(result);
+    }
+
     return(
         <div className="catalog">
             <h1>Plug & Play AI Solutions</h1>
